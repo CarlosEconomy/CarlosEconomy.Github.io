@@ -24,103 +24,68 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header Styles */
+/* Navbar Minimal & Blurred */
 header {
-  background-color: #0d6efd;
+  background: rgba(13, 110, 253, 0.55);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 32px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(13,110,253,0.08);
+  border-bottom: 1.5px solid rgba(255,255,255,0.08);
+  transition: background 0.3s;
 }
 
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
+  gap: 32px;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  margin: 0 20px;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-  outline: none;
-}
-
-.search-btn {
-  background-color: #0056b3;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
-
-.search-btn svg {
-  vertical-align: middle;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-right: 32px;
+  transition: color 0.3s;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 28px;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-size: 1.05rem;
+  padding: 6px 16px;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s;
+  opacity: 0.92;
 }
 
-.nav-links a:hover {
-  color: #ffcc00;
-}
-
+.nav-links a:hover,
 .nav-links a.active {
-  font-weight: 700;
-  border-bottom: 2px solid #fff;
-}
-
-.cart {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-}
-
-.cart-count {
-  background-color: #ff0000;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 700;
-  border-radius: 50%;
-  padding: 2px 6px;
-  position: absolute;
-  top: -5px;
-  right: -10px;
+  background: rgba(255,255,255,0.13);
+  color: #ffcc00;
+  opacity: 1;
 }
 
 .menu-toggle {
@@ -128,13 +93,127 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  margin-left: 18px;
 }
 
 .menu-toggle svg {
   vertical-align: middle;
+  fill: #fff;
 }
 
+/* Miglioramento barra di ricerca nella navbar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 22px;
+  padding: 4px 12px;
+  margin-left: 24px;
+  box-shadow: 0 2px 8px rgba(13,110,253,0.07);
+  transition: background 0.3s;
+}
 
+.search-bar input[type="search"] {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #222;
+  padding: 8px 10px;
+  width: 180px;
+  transition: width 0.3s;
+}
+
+.search-bar input[type="search"]::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+.search-bar:focus-within {
+  background: rgba(255,255,255,0.55);
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn:hover {
+  background: rgba(13,110,253,0.10);
+}
+
+.search-btn svg {
+  fill: #0d6efd;
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  .header-container {
+    gap: 12px;
+    padding: 0 8px;
+  }
+  .logo {
+    margin-right: 12px;
+  }
+  .nav-links {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 10px 10px;
+  }
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    background: rgba(13,110,253,0.85);
+    backdrop-filter: blur(18px);
+    border-radius: 18px;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 0;
+    z-index: 999;
+    box-shadow: 0 8px 32px rgba(13,110,253,0.13);
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .search-bar {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 4px 8px;
+  }
+  .search-bar input[type="search"] {
+    width: 100px;
+    font-size: 0.95rem;
+  }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -349,6 +428,70 @@ header {
   z-index: 2;
   padding: 20px 25px;
   margin: 0;
+}
+
+/* About Categories Section */
+.about-categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(13,110,253,0.07);
+  padding: 48px 32px;
+  margin: 48px auto 32px auto;
+  max-width: 1100px;
+}
+
+.about-categories-content {
+  flex: 1 1 0;
+  min-width: 260px;
+}
+
+.about-categories-content h2 {
+  font-size: 2.1rem;
+  color: #0d6efd;
+  margin-bottom: 18px;
+}
+
+.about-categories-content p {
+  font-size: 1.15rem;
+  color: #222;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.about-categories-content .btn-primary {
+  padding: 10px 28px;
+  font-size: 1.05rem;
+}
+
+.about-categories-image {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-categories-image img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 32px rgba(13,110,253,0.10);
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-categories {
+    flex-direction: column;
+    padding: 32px 12px;
+    gap: 28px;
+  }
+  .about-categories-image img {
+    max-width: 90vw;
+  }
 }
 
 /* Perché scegliere noi */

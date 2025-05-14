@@ -13,17 +13,15 @@
   <div class="header-container">
     <div class="logo">FotoPro</div>
     <div class="search-bar">
-      <input type="search" placeholder="Cerca prodotti..." id="searchInput" />
+      <input type="search" placeholder="Cerca prodotti..." />
       <button class="search-btn" aria-label="Cerca">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" width="20" height="20">
-          <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" viewBox="0 0 24 24"><path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/></svg>
       </button>
     </div>
     <nav>
       <ul id="navMenu" class="nav-links">
         <li><a href="#home" onclick="showSection('home')" class="active">Home</a></li>
-        <li><a href="#catalog" onclick="showSection('catalog')">Catalogo</a></li>
+        <li><a href="/Shop.html" onclick="showSection('catalog')">Catalogo</a></li>
         <li><a href="#account" onclick="showSection('account')">Account</a></li>
         <li><a href="#contact" onclick="showSection('contact')">Contatti</a></li>
       </ul>
@@ -68,20 +66,21 @@
       <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Novità" />
     </div>
 
-    <div class="categories">
-      <div class="category-card" onclick="filterByCategory('Corpi Macchina')">
-        <img src="https://images.unsplash.com/photo-1519183071298-a2962cc0a8e0?auto=format&fit=crop&w=400&q=80" alt="Corpi Macchina" />
-        <h3>Corpi Macchina</h3>
+    <section class="about-categories">
+      <div class="about-categories-content">
+        <h2>Chi è FotoPro</h2>
+        <p>
+          Da oltre 10 anni selezioniamo e proponiamo solo il meglio della fotografia professionale.<br>
+          Siamo un team di appassionati che crede nella qualità, nell’innovazione e nell’assistenza continua.<br>
+          Da noi trovi corpi macchina, obiettivi e accessori delle migliori marche, offerte esclusive e supporto dedicato.<br>
+          <strong>Scopri la nostra storia e lasciati ispirare dalla passione per l’immagine!</strong>
+        </p>
+        <a href="#catalog" class="btn-primary">Vai al catalogo</a>
       </div>
-      <div class="category-card" onclick="filterByCategory('Obiettivi')">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Obiettivi" />
-        <h3>Obiettivi</h3>
+      <div class="about-categories-image">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Team FotoPro" />
       </div>
-      <div class="category-card" onclick="filterByCategory('Accessori')">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Accessori" />
-        <h3>Accessori</h3>
-      </div>
-    </div>
+    </section>
 
     <section class="why-us">
       <h2>Perché scegliere FotoPro?</h2>

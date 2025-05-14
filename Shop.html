@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop - FotoPro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./shop.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">FotoPro</div>
+    <div class="search-bar">
+      <input type="search" placeholder="Cerca prodotti..." />
+      <button class="search-btn" aria-label="Cerca">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" viewBox="0 0 24 24"><path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/></svg>
+      </button>
+    </div>
+    <nav>
+      <ul id="navMenu" class="nav-links">
+        <li><a href="index.html#home" class="active">Home</a></li>
+        <li><a href="index.html#catalog">Catalogo</a></li>
+        <li><a href="index.html#account">Account</a></li>
+        <li><a href="index.html#contact">Contatti</a></li>
+      </ul>
+    </nav>
+    <div class="cart" title="Carrello" aria-label="Carrello">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-12.83-2.17l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm14.83-8.83h-14l-1-4h-2v2h1.5l2.5 10h11.5v-2h-10.5l-1.5-6h12l-1.5-4z" />
+      </svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </div>
+    <button class="menu-toggle" aria-label="Apri menu" onclick="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="shop-section">
+    <h1>Shop</h1>
+    <div class="shop-products-grid">
+      <!-- Prima riga di prodotti -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Fotocamera Pro" />
+        <h2>Fotocamera Pro X1</h2>
+        <p>La scelta dei professionisti. Sensore full-frame, 24MP.</p>
+        <span class="price">€1.299</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Obiettivo Zoom" />
+        <h2>Obiettivo Zoom 70-200mm</h2>
+        <p>Ideale per sport e natura. Apertura f/2.8.</p>
+        <span class="price">€899</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Treppiede Carbon" />
+        <h2>Treppiede Carbon</h2>
+        <p>Stabile e leggero, perfetto per viaggi e paesaggi.</p>
+        <span class="price">€249</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Zaino Fotografico" />
+        <h2>Zaino Fotografico Pro</h2>
+        <p>Protezione e comfort per tutta la tua attrezzatura.</p>
+        <span class="price">€129</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <!-- Seconda riga di prodotti -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Flash Speedlite" />
+        <h2>Flash Speedlite 600EX</h2>
+        <p>Potente e versatile, ideale per ogni situazione di luce.</p>
+        <span class="price">€299</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80" alt="Filtro ND" />
+        <h2>Filtro ND Variabile</h2>
+        <p>Controlla la luce per scatti creativi anche in pieno giorno.</p>
+        <span class="price">€59</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80" alt="Batteria Extra" />
+        <h2>Batteria Extra</h2>
+        <p>Più autonomia per le tue sessioni fotografiche.</p>
+        <span class="price">€39</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Scheda SD 128GB" />
+        <h2>Scheda SD 128GB</h2>
+        <p>Velocità e affidabilità per i tuoi file RAW e video 4K.</p>
+        <span class="price">€49</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <!-- Terza riga di prodotti -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Monopiede Pro" />
+        <h2>Monopiede Pro</h2>
+        <p>Stabilità e leggerezza per sport e reportage.</p>
+        <span class="price">€89</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80" alt="Zaino Urban" />
+        <h2>Zaino Urban</h2>
+        <p>Design compatto per la città, spazio per reflex e laptop.</p>
+        <span class="price">€99</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Kit Pulizia" />
+        <h2>Kit Pulizia Lenti</h2>
+        <p>Per mantenere sempre perfette le tue ottiche.</p>
+        <span class="price">€19</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=400&q=80" alt="Cinghia Comfort" />
+        <h2>Cinghia Comfort</h2>
+        <p>Massimo comfort per lunghe sessioni di scatto.</p>
+        <span class="price">€25</span>
+        <button>Aggiungi al carrello</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+function toggleMenu() {
+  const navMenu = document.getElementById('navMenu');
+  navMenu.classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
