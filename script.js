@@ -17,3 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
     foreground.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?forest')";
   }, 5000);
 });
+
+

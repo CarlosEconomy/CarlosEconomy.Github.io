@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FotoPro - Corpi Macchina e Accessori</title>
+<title>FotoPro - Cámaras y Accesorios</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,26 +13,19 @@
   <div class="header-container">
     <div class="logo">FotoPro</div>
     <div class="search-bar">
-      <input type="search" placeholder="Cerca prodotti..." />
-      <button class="search-btn" aria-label="Cerca">
+      <input type="search" placeholder="Buscar productos..." />
+      <button class="search-btn" aria-label="Buscar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" viewBox="0 0 24 24"><path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/></svg>
       </button>
     </div>
     <nav>
       <ul id="navMenu" class="nav-links">
-        <li><a href="#home" onclick="showSection('home')" class="active">Home</a></li>
-        <li><a href="/Shop.html" onclick="showSection('catalog')">Catalogo</a></li>
-        <li><a href="#account" onclick="showSection('account')">Account</a></li>
-        <li><a href="#contact" onclick="showSection('contact')">Contatti</a></li>
+        <li><a href="#home" onclick="showSection('home')" class="active">Inicio</a></li>
+        <li><a href="/Shop.html" onclick="showSection('catalog')">Catálogo</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
-    <div class="cart" onclick="showSection('cart')" title="Carrello" aria-label="Carrello">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" width="24" height="24">
-        <path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-12.83-2.17l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm14.83-8.83h-14l-1-4h-2v2h1.5l2.5 10h11.5v-2h-10.5l-1.5-6h12l-1.5-4z" />
-      </svg>
-      <span class="cart-count" id="cartCount">0</span>
-    </div>
-    <button class="menu-toggle" aria-label="Apri menu" onclick="toggleMenu()">
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">
       <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" width="24" height="24">
         <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
       </svg>
@@ -42,92 +35,102 @@
 
 <main>
 
-  <!-- Homepage -->
+  <!-- Página de inicio -->
   <section id="home" style="display:block;">
 
     <div class="hero">
       <video class="hero-video" autoplay muted loop>
         <source src="./videos/videoplayback.mp4" type="video/mp4" />
-        Il tuo browser non supporta il tag video.
+        Tu navegador no soporta el elemento de video.
       </video>
       <div class="hero-content">
-        <h1>Scopri Corpi Macchina e Accessori Professionali</h1>
-        <p>La nostra selezione esclusiva per fotografi esigenti ti aspetta.</p>
-        <button class="hero-btn" onclick="showSection('catalog')">Acquista Ora</button>
+        <h1>Descubre Cámaras y Accesorios Profesionales</h1>
+        <p>Nuestra selección exclusiva para fotógrafos exigentes te espera.</p>
+        <button class="hero-btn" onclick="showSection('catalog')">Compra Ahora</button>
       </div>
     </div>
 
-    <div class="secondary-banner">
-      <div>
-        <h2>Novità Primavera 2025</h2>
-        <p>Scopri le nuove mirrorless appena arrivate!</p>
-        <a href="#" class="btn-secondary">Scopri ora</a>
-      </div>
-      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Novità" />
-    </div>
 
     <section class="about-categories">
-      <div class="about-categories-content">
-        <h2>Chi è FotoPro</h2>
-        <p>
-          Da oltre 10 anni selezioniamo e proponiamo solo il meglio della fotografia professionale.<br>
-          Siamo un team di appassionati che crede nella qualità, nell’innovazione e nell’assistenza continua.<br>
-          Da noi trovi corpi macchina, obiettivi e accessori delle migliori marche, offerte esclusive e supporto dedicato.<br>
-          <strong>Scopri la nostra storia e lasciati ispirare dalla passione per l’immagine!</strong>
-        </p>
-        <a href="#catalog" class="btn-primary">Vai al catalogo</a>
-      </div>
-      <div class="about-categories-image">
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Team FotoPro" />
+      <div class="about-categories-container">
+        <div class="about-categories-text">
+          <h2>Bienvenido a FotoPro</h2>
+          <p>
+            Desde hace más de 10 años, FotoPro es el punto de referencia para fotógrafos profesionales y aficionados. Ofrecemos una selección cuidadosa de cámaras, objetivos y accesorios de las mejores marcas, garantizando calidad e innovación.
+          </p>
+          <p>
+            Nuestro equipo de expertos siempre está listo para apoyarte con consejos personalizados y asistencia continua. Nuestra misión es ayudarte a capturar cada momento con la máxima calidad y precisión.
+          </p>
+          <div class="about-categories-highlights">
+            <div class="highlight">
+              <img src="https://img.icons8.com/ios-filled/50/0d6efd/camera--v1.png" alt="Productos de calidad" />
+              <p>Productos de las mejores marcas como Canon, Nikon, Sony y Fujifilm.</p>
+            </div>
+            <div class="highlight">
+              <img src="https://img.icons8.com/ios-filled/50/0d6efd/discount--v1.png" alt="Ofertas exclusivas" />
+              <p>Ofertas exclusivas y promociones semanales para nuestros clientes.</p>
+            </div>
+            <div class="highlight">
+              <img src="https://img.icons8.com/ios-filled/50/0d6efd/delivery--v1.png" alt="Envíos rápidos" />
+              <p>Envíos rápidos a toda España en 24/48 horas.</p>
+            </div>
+            <div class="highlight">
+              <img src="https://img.icons8.com/ios-filled/50/0d6efd/guarantee.png" alt="Garantía" />
+              <p>Garantía de 2 años y soporte postventa dedicado.</p>
+            </div>
+          </div>
+          <a href="#catalog" class="btn-primary">Explora nuestro catálogo</a>
+        </div>
+        <div class="about-categories-image">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Equipo de FotoPro trabajando" />
+          <img src="https://images.unsplash.com/photo-1569620978591-455f6003eecc?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Equipo de FotoPro trabajando" />
+        </div>
       </div>
     </section>
 
     <section class="why-us">
-      <h2>Perché scegliere FotoPro?</h2>
+      <h2>¿Por qué elegir FotoPro?</h2>
       <div class="why-us-list">
         <div>
-          <img src="https://img.icons8.com/ios-filled/50/0d6efd/camera--v1.png" alt="Esperti" />
-          <h4>Esperti del settore</h4>
-          <p>Solo prodotti selezionati da veri professionisti.</p>
+          <img src="https://img.icons8.com/ios-filled/50/0d6efd/camera--v1.png" alt="Expertos" />
+          <h4>Expertos en el sector</h4>
+          <p>Solo productos seleccionados por verdaderos profesionales.</p>
         </div>
         <div>
-          <img src="https://img.icons8.com/ios-filled/50/0d6efd/discount--v1.png" alt="Offerte" />
-          <h4>Offerte esclusive</h4>
-          <p>Sconti e promozioni ogni settimana.</p>
+          <img src="https://img.icons8.com/ios-filled/50/0d6efd/discount--v1.png" alt="Ofertas" />
+          <h4>Ofertas exclusivas</h4>
+          <p>Descuentos y promociones cada semana.</p>
         </div>
         <div>
-          <img src="https://img.icons8.com/ios-filled/50/0d6efd/delivery--v1.png" alt="Spedizione" />
-          <h4>Spedizione rapida</h4>
-          <p>Consegna in 24/48h in tutta Italia.</p>
+          <img src="https://img.icons8.com/ios-filled/50/0d6efd/delivery--v1.png" alt="Envío" />
+          <h4>Envío rápido</h4>
+          <p>Entrega en 24/48h en toda España.</p>
         </div>
         <div>
-          <img src="https://img.icons8.com/ios-filled/50/0d6efd/guarantee.png" alt="Garanzia" />
-          <h4>Garanzia 2 anni</h4>
-          <p>Assistenza e reso facile su ogni acquisto.</p>
+          <img src="https://img.icons8.com/ios-filled/50/0d6efd/guarantee.png" alt="Garantía" />
+          <h4>Garantía de 2 años</h4>
+          <p>Asistencia y devoluciones fáciles en cada compra.</p>
         </div>
       </div>
     </section>
 
-    <section class="new-arrivals">
-      <h2>Nuovi Arrivi</h2>
-      <div class="product-list" id="newArrivals">
-        <!-- JS: inserisci qui i nuovi prodotti -->
-      </div>
-    </section>
 
     <section class="testimonials">
-      <h2>Cosa dicono i nostri clienti</h2>
+      <h2>Lo que dicen nuestros clientes</h2>
       <div class="testimonial-list">
         <div>
-          <p>"Servizio impeccabile e prodotti top! Consigliatissimo."</p>
+          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Alessia R." />
+          <p>"Servicio impecable y productos de primera calidad. ¡Muy recomendable!"</p>
           <span>- Alessia R.</span>
         </div>
         <div>
-          <p>"Ho ricevuto la mia fotocamera in meno di 24 ore. Fantastici!"</p>
+          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marco P." />
+          <p>"Recibí mi cámara en menos de 24 horas. ¡Fantásticos!"</p>
           <span>- Marco P.</span>
         </div>
         <div>
-          <p>"Supporto clienti sempre disponibile. Tornerò sicuramente."</p>
+          <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Giulia F." />
+          <p>"Atención al cliente siempre disponible. Definitivamente volveré."</p>
           <span>- Giulia F.</span>
         </div>
       </div>
@@ -135,36 +138,31 @@
 
     <section class="support-newsletter">
       <div class="support">
-        <img src="https://img.icons8.com/ios-filled/50/0d6efd/help.png" alt="Supporto" />
+        <img src="https://img.icons8.com/ios-filled/50/0d6efd/help.png" alt="Soporte" />
         <div>
-          <h4>Supporto 7 giorni su 7</h4>
-          <p>Hai bisogno di aiuto? <a href="mailto:info@fotopro.it">Contattaci</a></p>
+          <h4>Soporte 7 días a la semana</h4>
+          <p>¿Necesitas ayuda? </p>
         </div>
       </div>
       <div class="newsletter">
-        <h4>Iscriviti alla Newsletter</h4>
-        <form onsubmit="event.preventDefault();alert('Grazie per esserti iscritto!');">
-          <input type="email" placeholder="La tua email" required />
-          <button type="submit">Iscriviti</button>
+        <h4>Suscríbete al Boletín</h4>
+        <form onsubmit="event.preventDefault(); showEmailSentPopup();">
+          <input type="email" placeholder="Tu correo electrónico" required />
+          <button type="submit">Suscribirse</button>
         </form>
       </div>
     </section>
 
     <div class="banner">
-      Offerta speciale: 20% di sconto su tutti i corpi macchina fino a fine mese!
+      Oferta especial: ¡20% de descuento en todas las cámaras hasta fin de mes!
     </div>
 
-    <div class="offers">
-      <h2>Prodotti in Offerta</h2>
-      <div class="product-list" id="offersList">
-        <!-- Prodotti offerta inseriti via JS -->
-      </div>
-    </div>
+
   </section>
 
-  <!-- Catalogo Prodotti -->
+  <!-- Catálogo de Productos -->
   <section id="catalog" style="display:none;">
-    <h2>Catalogo Prodotti</h2>
+    <h2>Catálogo de Productos</h2>
     <div class="filters">
       <select id="filterBrand" onchange="applyFilters()">
         <option value="">Marca</option>
@@ -173,114 +171,125 @@
         <option value="Sony">Sony</option>
       </select>
       <select id="filterPrice" onchange="applyFilters()">
-        <option value="">Prezzo</option>
-        <option value="0-500">Fino a 500€</option>
+        <option value="">Precio</option>
+        <option value="0-500">Hasta 500€</option>
         <option value="501-1500">501€ - 1500€</option>
-        <option value="1501-99999">Oltre 1500€</option>
+        <option value="1501-99999">Más de 1500€</option>
       </select>
       <select id="filterCompat" onchange="applyFilters()">
-        <option value="">Compatibilità</option>
+        <option value="">Compatibilidad</option>
         <option value="Canon">Canon</option>
         <option value="Nikon">Nikon</option>
         <option value="Sony">Sony</option>
       </select>
       <select id="sortOrder" onchange="applyFilters()">
-        <option value="">Ordina per</option>
-        <option value="priceAsc">Prezzo: crescente</option>
-        <option value="priceDesc">Prezzo: decrescente</option>
-        <option value="nameAsc">Nome: A-Z</option>
-        <option value="nameDesc">Nome: Z-A</option>
+        <option value="">Ordenar por</option>
+        <option value="priceAsc">Precio: ascendente</option>
+        <option value="priceDesc">Precio: descendente</option>
+        <option value="nameAsc">Nombre: A-Z</option>
+        <option value="nameDesc">Nombre: Z-A</option>
       </select>
     </div>
     <div class="catalog-products" id="catalogProducts">
-      <!-- Prodotti catalogo inseriti via JS -->
+      <!-- Productos del catálogo insertados vía JS -->
     </div>
   </section>
 
-  <!-- Dettaglio Prodotto -->
+  <!-- Detalle del Producto -->
   <section id="productDetail" style="display:none;">
-    <button onclick="showSection('catalog')">← Torna al catalogo</button>
+    <button onclick="showSection('catalog')">← Volver al catálogo</button>
     <div class="product-detail" id="productDetailContent">
-      <!-- Contenuto dinamico -->
+      <!-- Contenido dinámico -->
     </div>
   </section>
 
-  <!-- Carrello -->
-  <section id="cart" style="display:none;">
-    <h2>Carrello</h2>
-    <div class="cart-page">
-      <div class="cart-items" id="cartItems">
-        <!-- Prodotti nel carrello -->
-      </div>
-      <div class="cart-summary" id="cartTotal">
-        Totale: €0
-      </div>
+  
 
-      <div class="checkout-steps">
-        <div id="step1" class="step active">
-          <h3>1. Spedizione</h3>
-          <label>Indirizzo:<br /><input type="text" id="shippingAddress" style="width:100%; padding:8px;" /></label>
-        </div>
-        <div id="step2" class="step">
-          <h3>2. Pagamento</h3>
-          <label>Metodo di pagamento:<br />
-            <select id="paymentMethod" style="width:100%; padding:8px;">
-              <option value="carta">Carta di credito</option>
-              <option value="paypal">PayPal</option>
-            </select>
-          </label>
-        </div>
-        <div id="step3" class="step">
-          <h3>3. Conferma</h3>
-          <p>Controlla i dati e conferma l'ordine.</p>
-          <button onclick="confirmOrder()">Conferma Ordine</button>
-        </div>
-        <div class="step-buttons">
-          <button id="prevStep" onclick="changeStep(-1)" disabled>Indietro</button>
-          <button id="nextStep" onclick="changeStep(1)">Avanti</button>
-        </div>
-      </div>
+
+
+
+  <section id="contact" class="social-media-section">
+    <h2>Síguenos en las Redes Sociales</h2>
+    <p>¡Mantente conectado con nosotros para descubrir novedades, ofertas e inspiración fotográfica!</p>
+    <div class="social-media-icons">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon instagram">
+        <img src="https://img.icons8.com/ios-filled/50/E1306C/instagram-new.png" alt="Instagram" />
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon facebook">
+        <img src="https://img.icons8.com/ios-filled/50/1877F2/facebook-new.png" alt="Facebook" />
+        <span>Facebook</span>
+      </a>
+      <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon whatsapp">
+        <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" />
+        <span>WhatsApp</span>
+      </a>
     </div>
   </section>
 
-  <!-- Pagina Account -->
-  <section id="account" style="display:none;">
-    <h2>Account Utente</h2>
-    <div class="account-page">
-      <div class="account-section" id="userDataSection">
-        <h3>Dati Utente</h3>
-        <p>Nome: <span id="userName">Mario Rossi</span></p>
-        <p>Email: <span id="userEmail">mario.rossi@example.com</span></p>
-      </div>
-      <div class="account-section" id="ordersSection">
-        <h3>Ordini</h3>
-        <ul class="order-list" id="orderList">
-          <li>Nessun ordine effettuato</li>
-        </ul>
-      </div>
-      <div class="account-section" id="wishlistSection">
-        <h3>Wishlist</h3>
-        <ul class="wishlist-list" id="wishlistList">
-          <li>Wishlist vuota</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
 </main>
 
-<footer>
-  <p>Contatti: info@fotopro.it | Tel: 0123 456789</p>
-  <div class="social-links" aria-label="Link social">
-    <a href="#" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">📘</a>
-    <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">📸</a>
-    <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">🐦</a>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <h4>FotoPro</h4>
+      <p>NIF: 12345678901</p>
+      <p>Dirección: Calle Roma 123, Barcelona, España</p>
+      <p>Email: <a href="mailto:info@fotopro.it">cfruhbeck03@gmail.com</a></p>
+      <p>Teléfono: 0123 456789</p>
+    </div>
+    <div class="footer-links">
+      <h4>Enlaces Útiles</h4>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="/Shop.html">Catálogo</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#privacy">Política de Privacidad</a></li>
+        <li><a href="#terms">Términos y Condiciones</a></li>
+      </ul>
+    </div>
   </div>
-  <p class="copyright">&copy; 2025 FotoPro. Tutti i diritti riservati.</p>
+  <div class="footer-bottom">
+    <p>&copy; 2025 FotoPro. Todos los derechos reservados.</p>
+  </div>
 </footer>
 
 
 <script src="script.js"></script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+
+<div id="emailPopup" class="popup hidden">
+  <div class="popup-content">
+    <p>¡Email enviada con éxito!</p>
+    <button onclick="closePopup()">Cerrar</button>
+  </div>
+</div>
+
+<script>
+  function showEmailSentPopup() {
+    const popup = document.getElementById('emailPopup');
+    popup.classList.remove('hidden');
+  }
+
+  function closePopup() {
+    const popup = document.getElementById('emailPopup');
+    popup.classList.add('hidden');
+  }
+</script>
 
 </body>
 </html>
