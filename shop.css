@@ -256,6 +256,8 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between; /* Distribuisce gli elementi verticalmente */
+  height: 100%; /* Assicura che tutte le schede abbiano la stessa altezza */
 }
 
 .product-card img {
@@ -286,6 +288,7 @@ nav {
 }
 
 .product-card button {
+  margin-top: auto; /* Spinge il bottone verso il basso */
   background: #0d6efd;
   color: #fff;
   border: none;
